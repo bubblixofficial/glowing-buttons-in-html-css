@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>glowing buttons by html and css</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        html,
+        body {
+            display: grid;
+            height: 100%;
+            place-items: center;
+            background-color: black;
+           
+           
+        }
+        .btns{
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn:hover{
+            background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+        animation: glowb 1s linear 0s infinite ;
+        }
+        @keyframes glowb {
+            0%{
+                filter: hue-rotate(0deg);
+            }
+            100%{
+                filter: hue-rotate(360deg);
+            }
+            
+        }
+        .btn{
+            margin: 0px 70px;
+            
+
+        }
+        .button1{
+            height: 60px;
+            width: 150px;
+            border-radius: 50px;
+        }
+        .button2{
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+        }
+        .btn button{
+            position: absolute;
+            top: 50%;
+            border: none;
+            outline: none;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .btn button{
+            background-color: black;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            color: white;
+            text-transform: uppercase;
+        }
+        .button1 button{
+            height: 55px;
+            width: 140px;
+            border-radius: 50px;
+
+        }
+        .button2 button{
+            height: 140px;
+            width: 140px;
+            border-radius: 50%;
+
+
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    
+    <div class="btns">
+        <div class="btn button1">
+            <button class="oval">Hover Me</button>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="btn button2">
+            <button class="circle">Hover Me</button>
+        
+        
+        </div>
+
+    </div>
+
+    <!-- background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0); -->
+</body>
+
+</html>
